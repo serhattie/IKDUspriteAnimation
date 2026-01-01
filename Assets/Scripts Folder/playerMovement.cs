@@ -17,7 +17,7 @@ public class playerMovement : MonoBehaviour // script that controls player movem
 
     private void OnMovement(InputValue value) // called by the Input System when movement input happens
     {
-        movement = value.Get<Vector2>(); // reads WASD / joystick input and stores it as a Vector2
+        movement = value.Get<Vector2>(); // reads WASD input and stores it as a Vector2
 
         if (movement.x != 0 || movement.y != 0) // checks if the player is moving
         {
@@ -36,3 +36,4 @@ public class playerMovement : MonoBehaviour // script that controls player movem
         myBody.linearVelocity = movement * speed; // moves the player based on direction and speed
     }
 }
+
